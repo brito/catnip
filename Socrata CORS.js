@@ -1,7 +1,7 @@
 console.clear()
 var token = 'http://dev.socrata.com/authentication',
-    url = 'https://controllerdata.lacity.org/resource/payroll.json',
-    query = '?$select=department_title, sum(actual_earnings)&$group=department_title',
+    url = 'https://controllerdata.lacity.org/resource/checkbook.json',
+    query = '?$select=department_name, sum(dollar_amount)&$group=department_name',
     xhr = new XMLHttpRequest;
     
 xhr.onload = function (){ 
