@@ -1,4 +1,4 @@
-// XHR + async map
+/*! get.js : XHR+Promise, more or less. //github.com/brito/catnip */
 var get = (function(url, params) {
   with (new this)
     // You can replace this with your error handling function instead.
@@ -19,7 +19,7 @@ var get = (function(url, params) {
     queue.map = function(fn){ wish = fn; return this };
     return queue;
   }
-  // Apply wish to every array item, when returned.
+  // Apply wish to each array item, when returned.
   function fulfill(response) { response.forEach(wish); }
   
   return new Fairy;
